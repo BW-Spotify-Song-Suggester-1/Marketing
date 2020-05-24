@@ -15,13 +15,13 @@
 @button-large-font-size:                        @global-small-font-size;
 
 @button-default-background:                     transparent;
-@button-default-hover-background:               transparent;
-@button-default-active-background:              transparent;
+@button-default-hover-background:               @global-primary-background;
+@button-default-active-background:              @global-primary-background;
 
 @button-disabled-background:                    transparent;
 
-@button-text-color:                             @global-emphasis-color;
-@button-text-hover-color:                       @global-emphasis-color;
+@button-text-color:                             @global-primary-background;
+@button-text-hover-color:                       @global-primary-background;
 
 //
 // New
@@ -31,7 +31,8 @@
 
 @button-border-width:                           @global-border-width;
 
-@button-default-border:                         @global-border;
+@button-default-text:                           @global-primary-background;
+@button-default-border:                         @global-primary-background;
 @button-default-hover-border:                   darken(@global-border, 20%);
 @button-default-active-border:                  darken(@global-border, 30%);
 
@@ -60,9 +61,15 @@
 // Style modifiers
 // ========================================================================
 
-.hook-button-default() { border: @button-border-width solid @button-default-border; }
+.hook-button-default() { 
+    border: @button-border-width solid @button-default-border;
+    color: @button-default-text;
+}
 
-.hook-button-default-hover() { border-color: @button-default-hover-border; }
+.hook-button-default-hover() { 
+    border-color: @button-default-hover-border;
+    color: @inverse-button-default-color;
+}
 
 .hook-button-default-active() { border-color: @button-default-active-border; }
 
