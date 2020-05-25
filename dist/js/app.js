@@ -38,4 +38,12 @@ function pauseAudio() {
     document.getElementById('audioPlayer').pause();
     document.getElementById("pauseButton").classList.add("uk-hidden");
     document.getElementById("playButton").classList.remove("uk-hidden");
-}   
+}
+// App Menu
+function openAppMenu() {
+    document.getElementById("appMenu").classList.remove("uk-hidden");
+}
+
+function closeAppMenu() {
+    document.getElementById("appMenu").classList.add("uk-hidden");
+}  

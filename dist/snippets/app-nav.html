@@ -3,7 +3,7 @@
         <div class="uk-navbar-left uk-margin-left">
             <ul class="uk-navbar-nav">
                 <li>
-                    <a type="button" uk-toggle="target: #appMenu"><i class="fal fa-bars"></i></a>
+                    <a id="appMenuOpenButton" onclick="openAppMenu()" type="button"><i class="fal fa-bars"></i></a>
                 </li>
             </ul>
         </div>
@@ -63,7 +63,7 @@
             </ul>
         </div>
     </nav>
-    <div id="appMenu">
+    <div id="appMenu" class="uk-hidden">
         <div class="large-circle circle">
             <a class="bottom-icon" href="#"><i class="fal fa-heart-square"></i></a>
             <a class="middle-icon" href="#"><i class="fal fa-list-music"></i></a>
@@ -74,7 +74,7 @@
             <a class="top-icon" href="#"><i class="fal fa-home"></i></a>
         </div>
         <div class="small-circle">
-            <a type="button" uk-toggle="target: #appMenu" href="#"><i class="fal fa-times"></i></a>
+            <a id="appMenuCloseButton" onclick="closeAppMenu()" type="button" href="#"><i class="fal fa-times"></i></a>
         </div>
     </div>
 </div>
