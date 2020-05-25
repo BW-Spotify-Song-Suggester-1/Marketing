@@ -24,11 +24,11 @@
                     </div>
                 </li>
                 <li><a><i class="fal fa-backward"></i></a></li>
-                <li class="play-pause-toggle">
-                    <a onclick="document.getElementById('audioPlayer').play()"><i class="fal fa-play"></i></a>
+                <li>
+                    <a id="playButton" onclick="playAudio()"><i class="fal fa-play"></i></a>
                 </li>
-                <li class="play-pause-toggle">
-                    <a onclick="document.getElementById('audioPlayer').pause()"><i class="fal fa-pause"></i></a>
+                <li>
+                    <a id="pauseButton" onclick="pauseAudio()" class="uk-hidden"><i class="fal fa-pause"></i></a>
                 </li>
                 <li><a><i class="fal fa-forward"></i></a></li>
                 <li>

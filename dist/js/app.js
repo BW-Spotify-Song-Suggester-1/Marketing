@@ -26,3 +26,16 @@ function includeHTML() {
         }
     }
 };
+
+// Song Playing
+function playAudio() {
+    document.getElementById('audioPlayer').play();
+    document.getElementById("playButton").classList.add("uk-hidden");
+    document.getElementById("pauseButton").classList.remove("uk-hidden");
+}
+
+function pauseAudio() {
+    document.getElementById('audioPlayer').pause();
+    document.getElementById("pauseButton").classList.add("uk-hidden");
+    document.getElementById("playButton").classList.remove("uk-hidden");
+}   
