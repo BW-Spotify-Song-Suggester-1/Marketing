@@ -1,4 +1,5 @@
 footer {
+    overflow: hidden;
     a{
         color: @global-inverse-color;
         &:hover,
@@ -18,69 +19,66 @@ footer {
         left: 0;
         bottom: 0;
         
-        .close {
+        .small-circle {
             position: absolute;
-            bottom: -70px;
-            left: -70px;
-            width: 160px;
-            height: 160px;
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: 100%;
+            width: 100px;
+            height: 100px;
             background: @global-secondary-background;
             i {
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                bottom: 30px;
+                left: 30px;
             }
         }
-        .small-circle {
+        .medium-circle {
             position: absolute;
-            bottom: -140px;
-            left: -140px;
-            width: 300px;
-            height: 300px;
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: 100%;
+            width: 170px;
+            height: 170px;
             background: #182032;
             .top-icon{
                 position: absolute;
-                top: 32px;
-                right: 102px;
+                bottom: 110px;
+                left: 30px;
             }
             .bottom-icon {
                 position: absolute;
-                top: 110px;
-                right: 30px;
-            }
-        }
-
-        .medium-circle {
-            position: absolute;
-            bottom: -220px;
-            left: -220px;
-            width: 460px;
-            height: 460px;
-            background: @global-border;
-            .bottom-icon{
-                position: absolute;
-                top: 185px;
-                right: 30px;
-            }
-            .middle-icon{
-                position: absolute;
-                top: 82px;
-                right: 79px;
-            }
-            .top-icon {
-                position: absolute;
-                top: 29px;
-                right: 180px;
+                bottom: 25px;
+                left: 110px;
             }
         }
 
         .large-circle {
             position: absolute;
-            bottom: -225px;
-            left: -225px;
-            width: 470px;
-            height: 470px;
-            background: @global-primary-background;	
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: 100%;
+            width: 240px;
+            height: 240px;
+            background: @global-border;
+            border: 5px solid @global-primary-background;
+            border-left: none;
+            border-bottom: none;
+            .bottom-icon{
+                position: absolute;
+                bottom: 25px;
+                left: 185px;
+            }
+            .middle-icon{
+                position: absolute;
+                top: 90px;
+                left: 140px;
+            }
+            .top-icon {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
         }
 
     }
