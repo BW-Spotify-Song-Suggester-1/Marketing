@@ -1,0 +1,83 @@
+<div class="uk-position-bottom uk-background-secondary">
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a type="button" uk-toggle="target: #appMenu"><i class="fal fa-bars"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-navbar-center">
+            <audio id="audioPlayer">
+                <source src="media/StillWoozy-Window.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <ul id="mediaPlayer" class="uk-navbar-nav">
+                <li class="uk-visible@s">
+                    <a href="#"><img class="uk-border-circle" src="images/album-cover.jpg" width="50" height="50"></a>
+                </li>
+                <li class="uk-visible@s">
+                    <div class="uk-padding-small">
+                        <a href="#" class="uk-text-top">Window</a> </br>
+                        <a href="#"><small>Still Woozy</small></a>
+                    </div>
+                </li>
+                <li><a><i class="fal fa-backward"></i></a></li>
+                <li class="play-pause-toggle">
+                    <a onclick="document.getElementById('audioPlayer').play()"><i class="fal fa-play"></i></a>
+                </li>
+                <li class="play-pause-toggle">
+                    <a onclick="document.getElementById('audioPlayer').pause()"><i class="fal fa-pause"></i></a>
+                </li>
+                <li><a><i class="fal fa-forward"></i></a></li>
+                <li>
+                    <div id="waveform"></div>
+                </li>
+                <li class="uk-visible@s">
+                    <a>01:29 / 2:53</a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-navbar-right uk-margin-right">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a><i class="fal fa-list-alt"></i></a>
+                </li>
+                <li>
+                    <a class="uk-margin-right uk-padding-remove-right" href="#"><img
+                            class="uk-border-circle uk-blend-luminosity" width="35" height="35"
+                            src="images/profile-image.png"></a>
+                    <div class="uk-background-secondary"
+                        uk-dropdown="pos: top-right; mode: click;animation: uk-animation-slide-bottom-small; duration: 1000">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-nav-header">Maryam Mosstoufi</li>
+                            <li><a href="#"><i class="fal fa-user uk-margin-right"></i>Profile</a></li>
+                            <li><a href="#"><i class="fal fa-cog uk-margin-right"></i>Settings</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a id="signOut" href="#"><i class="fal fa-power-off uk-margin-right"></i>Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div>
+    <div id="appMenu">
+        <div class="large-circle circle uk-border-circle"></div>
+        <div class="medium-circle circle uk-border-circle">
+            <a class="bottom-icon" href="#"><i class="fal fa-heart-square"></i></a>
+            <a class="middle-icon" href="#"><i class="fal fa-list-music"></i></a>
+            <a class="top-icon" href="#"><i class="fal fa-album-collection"></i></a>
+        </div>
+        <div class="small-circle circle uk-border-circle">
+            <a class="bottom-icon" href="#search"><i class="fal fa-search"></i></a>
+            <a class="top-icon" href="#"><i class="fal fa-home"></i></a>
+        </div>
+        <div class="close uk-border-circle">
+            <a type="button" uk-toggle="target: #appMenu" href="#"><i class="fal fa-times"></i></a>
+        </div>
+    </div>
+</div>
