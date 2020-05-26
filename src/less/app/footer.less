@@ -3,26 +3,28 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    
-    a{
+
+    a {
         color: @global-inverse-color;
+
         &:hover,
         &:active,
         &:focus {
-            color: @global-primary-background !important;
+            color: @global-primary-background  !important;
             text-decoration: none;
         }
+
         i {
             font-size: 24px;
         }
     }
-    
+
     #appMenu {
         position: absolute;
         z-index: 1000;
         left: 0;
         //
-        
+
         .small-circle {
             position: absolute;
             bottom: 0;
@@ -31,12 +33,14 @@ footer {
             width: 100px;
             height: 100px;
             background: @global-secondary-background;
+
             i {
                 position: absolute;
                 bottom: 30px;
                 left: 30px;
             }
         }
+
         .medium-circle {
             position: absolute;
             bottom: 0;
@@ -45,11 +49,13 @@ footer {
             width: 170px;
             height: 170px;
             background: #182032;
-            .top-icon{
+
+            .top-icon {
                 position: absolute;
                 bottom: 110px;
                 left: 30px;
             }
+
             .bottom-icon {
                 position: absolute;
                 bottom: 25px;
@@ -68,16 +74,19 @@ footer {
             border: 5px solid @global-primary-background;
             border-left: none;
             border-bottom: none;
-            .bottom-icon{
+
+            .bottom-icon {
                 position: absolute;
                 bottom: 25px;
                 left: 185px;
             }
-            .middle-icon{
+
+            .middle-icon {
                 position: absolute;
                 top: 90px;
                 left: 140px;
             }
+
             .top-icon {
                 position: absolute;
                 top: 30px;
@@ -85,5 +94,10 @@ footer {
             }
         }
 
+    }
+
+    .time:hover {
+        color: @global-muted-color  !important;
+        cursor: default;
     }
 }

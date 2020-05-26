@@ -10,7 +10,7 @@
         </div>
         <div class="uk-navbar-center">
             <audio id="audioPlayer">
-                <source src="media/StillWoozy-Window.mp3" type="audio/mpeg">
+                <source id="audioPlayerSource" src="media/StillWoozy-Window.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
 
@@ -36,8 +36,15 @@
                     <div id="waveform"></div>
                 </li>
                 <li class="uk-visible@m">
-                    <a>01:29 / 2:53</a>
+                    <a class="time">
+                        <span class="current">1:07</span>
+                        <span class="divider">&nbsp/&nbsp</span>
+                        <span class="length">2:39</span>
+                    </a>
                 </li>
+                <div class="time">
+
+                </div>
             </ul>
         </div>
         <div class="uk-navbar-right uk-margin-right">
@@ -79,3 +86,10 @@
         </div>
     </div>
 </div>
+<script>
+    function audioDuration() {
+        var x = document.getElementById("audioPlayer").duration;
+        document.getElementById("audioTotalTime").innerHTML = x;
+    };
+    audioDuration();
+</script>
