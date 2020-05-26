@@ -32,12 +32,15 @@ function playAudio() {
     document.getElementById('audioPlayer').play();
     document.getElementById("playButton").classList.add("uk-hidden");
     document.getElementById("pauseButton").classList.remove("uk-hidden");
+    document.getElementById("songCover").classList.add("spin");
+    document.getElementById("songCover").classList.remove("spin-paused");
 }
 
 function pauseAudio() {
     document.getElementById('audioPlayer').pause();
     document.getElementById("pauseButton").classList.add("uk-hidden");
     document.getElementById("playButton").classList.remove("uk-hidden");
+    document.getElementById("songCover").classList.add("spin-paused");
 }
 // App Menu
 function openAppMenu() {
@@ -46,4 +49,5 @@ function openAppMenu() {
 
 function closeAppMenu() {
     document.getElementById("appMenu").classList.add("uk-hidden");
-}  
+}
+
