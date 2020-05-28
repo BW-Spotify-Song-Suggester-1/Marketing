@@ -17,20 +17,27 @@
 </head>
 
 <body>
-    <!-- Home Page-->
-
-    <!-- Song Page-->
-    <div uk-html-include="snippets/song-playing.html"></div>
-
-    <!-- Albums Page-->
-    <!-- <div uk-html-include="snippets/albums.html"></div> -->
+    <ul class="uk-switcher app-pages">
+        <li uk-html-include="snippets/app-home.html"></li>
+        <li uk-html-include="snippets/favorites.html"></li>
+        <li uk-html-include="snippets/play-lists.html"></li>
+        <li uk-html-include="snippets/albums.html"></li>
+        <li uk-html-include="snippets/song-playing.html"></li>
+    </ul>
 
     <!-- Always Showing-->
     <div uk-html-include="snippets/play-queue.html"></div>
     <footer class="app-footer">
         <div uk-html-include="snippets/app-nav.html"></div>
     </footer>
-    <div uk-html-include="snippets/search.html"></div>
+    <div id="search" class="uk-modal-full uk-modal" uk-modal>
+        <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <form class="uk-search uk-search-large">
+                <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
+            </form>
+        </div>
+    </div>
 
     <!-- HTML Include-->
     <script>
