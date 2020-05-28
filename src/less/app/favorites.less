@@ -1,0 +1,51 @@
+#favorites {
+    li {
+        .switching-icons> {
+            font-size: 24px;
+            display: inline-block;
+            min-width: 50px !important;
+            max-width: 50px !important;
+
+            .fa-play-circle,
+            .fa-volume {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background: @global-border;
+
+            .fa-music-alt {
+                display: none;
+            }
+
+            .fa-play-circle {
+                display: inline-block;
+                color: @global-color;
+
+                &:hover {
+                    color: @global-primary-background;
+                }
+            }
+        }
+    }
+
+
+    li.uk-active {
+        .fa-music-alt {
+            display: none;
+        }
+
+        .fa-volume {
+            display: inline-block;
+            color: @global-primary-background;
+        }
+
+        &:hover {
+            .fa-play-circle {
+                display: none;
+            }
+        }
+    }
+
+}
