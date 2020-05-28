@@ -1,3 +1,5 @@
 # Marketing
 
-https://pulsified.netlify.app/
+Landing Page: https://pulsified.netlify.app/ 
+
+App Page: https://pulsified.netlify.app/app.html
