@@ -36,6 +36,41 @@
     <script>
         includeHTML();
     </script>
+    <!-- Audio Player-->
+    <script>
+        setTimeout(() => {
+            var playBtn = document.getElementById('playButton');
+            var stopBtn = document.getElementById('pauseButton');
+
+            var audio = document.getElementById("audioPlayer");
+
+            var playSound = function () {
+                audio.play();
+            };
+
+            playBtn.addEventListener('click', playSound, false);
+            stopBtn.addEventListener('click', function () { audio.pause() }, false);
+            audio.ontimeupdate = function () { timeUpdate() };
+            //Duration time//
+            var minutes = parseInt(audio.duration / 60, 10);
+            var seconds = parseInt(audio.duration % 60);
+
+            document.getElementById("audioDurationTime").innerHTML = minutes + ':' + seconds;
+
+            //Passed time//
+            function timeUpdate() {
+                var mins = Math.floor(audio.currentTime / 60);
+
+                var secs = Math.floor(audio.currentTime % 60);
+                if (secs < 10) {
+                    secs = '0' + String(secs);
+                }
+                audio.currentTimeFormatted = mins + ':' + secs;
+                document.getElementById("audioPassedTime").innerHTML = audio.currentTimeFormatted;
+            }
+
+        }, 200);
+    </script>
 </body>
 
 </html>

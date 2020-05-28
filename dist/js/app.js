@@ -35,7 +35,7 @@ function playAudio() {
     document.getElementById("songCover").classList.add("spin");
     document.getElementById("songCover").classList.remove("spin-paused");
 }
-
+// Song Paused
 function pauseAudio() {
     document.getElementById('audioPlayer').pause();
     document.getElementById("pauseButton").classList.add("uk-hidden");
