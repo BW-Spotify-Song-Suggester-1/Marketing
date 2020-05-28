@@ -3,9 +3,11 @@
         <div class="uk-navbar-left uk-margin-left">
             <ul class="uk-navbar-nav">
                 <li><a id="appMenuOpenButton" onclick="openAppMenu()" type="button"><i class="fal fa-bars"></i></a></li>
+                <li><a class="uk-navbar-toggle" href="#search" uk- uk-toggle><i class="fal fa-search"></i></a></li>
+
+                <!-- <a class="uk-navbar-item uk-logo uk-visible@m" href="app.html"><span
+                    class="uk-text-primary uk-text-uppercase">Pulsified</span></a> -->
             </ul>
-            <a class="uk-navbar-item uk-logo uk-visible@m" href="app.html"><span
-                    class="uk-text-primary uk-text-uppercase">Pulsified</span></a>
         </div>
         <div class="uk-navbar-center"><audio id="audioPlayer" src="media/StillWoozy-Window.mp3" type="audio/mpeg"
                 preload="auto"></audio>
@@ -30,9 +32,6 @@
         </div>
         <div class="uk-navbar-right uk-margin-right">
             <ul class="uk-navbar-nav">
-                <li><a class="uk-navbar-toggle uk-visible@m" href="#search" uk-toggle><i class="fal fa-search"></i></a>
-                </li>
-
                 <li><a href="#playQueue" uk-toggle><i class="fal fa-list-alt"></i></a></li>
                 <li><a class="uk-margin-right uk-padding-remove-right" href="#"><img
                             class="uk-border-circle uk-blend-luminosity" width="35" height="35"
@@ -57,11 +56,11 @@
         <div class="medium-circle circle"></div>
 
         <ul uk-switcher="connect: .app-pages">
-            <li><a class="bottom-icon-large-circle" href="#"><i class="fal fa-heart-square"></i></a></li>
-            <li><a class="middle-icon-large-circle" href="#"><i class="fal fa-list-music"></i></a></li>
-            <li><a class="top-icon-large-circle" href="#"><i class="fal fa-album-collection"></i></a></li>
-            <li><a class="bottom-icon-medium-circle" href="#"><i class="fal fa-user-music"></i></a></li>
-            <li><a class="top-icon-medium-circle" href="#"><i class="fal fa-home"></i></a></li>
+            <li><a class="bottom-icon-large-circle" href="app.html"><i class="fal fa-heart-square"></i></a></li>
+            <li><a class="middle-icon-large-circle" href="app.html"><i class="fal fa-list-music"></i></a></li>
+            <li><a class="top-icon-large-circle" href="app.html"><i class="fal fa-album-collection"></i></a></li>
+            <li><a class="bottom-icon-medium-circle" href="app.html"><i class="fal fa-user-music"></i></a></li>
+            <li><a class="top-icon-medium-circle" href="app.html"><i class="fal fa-home"></i></a></li>
         </ul>
         <div class="small-circle">
             <a id="appMenuCloseButton" onclick="closeAppMenu()" type="button" href="#"><i class="fal fa-times"></i></a>
