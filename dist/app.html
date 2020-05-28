@@ -17,13 +17,14 @@
 </head>
 
 <body>
-    <!-- Home Page-->
+    <ul class="uk-switcher app-pages">
+        <li uk-html-include="snippets/favorites.html"></li>
+        <li uk-html-include="snippets/play-lists.html"></li>
+        <li uk-html-include="snippets/albums.html"></li>
+        <li uk-html-include="snippets/song-playing.html"></li>
+        <li uk-html-include="snippets/app-home.html"></li>
+    </ul>
 
-    <!-- Song Page-->
-    <div uk-html-include="snippets/song-playing.html"></div>
-
-    <!-- Albums Page-->
-    <!-- <div uk-html-include="snippets/albums.html"></div> -->
 
     <!-- Always Showing-->
     <div uk-html-include="snippets/play-queue.html"></div>

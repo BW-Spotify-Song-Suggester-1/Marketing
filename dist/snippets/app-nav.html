@@ -2,54 +2,39 @@
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left uk-margin-left">
             <ul class="uk-navbar-nav">
-                <li>
-                    <a id="appMenuOpenButton" onclick="openAppMenu()" type="button"><i class="fal fa-bars"></i></a>
-                </li>
+                <li><a id="appMenuOpenButton" onclick="openAppMenu()" type="button"><i class="fal fa-bars"></i></a></li>
             </ul>
-            <a class="uk-navbar-item uk-logo" href="app.html">
-                <span class="uk-text-primary uk-text-uppercase">Pulsified</span>
-            </a>
+            <a class="uk-navbar-item uk-logo uk-visible@m" href="app.html"><span
+                    class="uk-text-primary uk-text-uppercase">Pulsified</span></a>
         </div>
-        <div class="uk-navbar-center">
-            <audio id="audioPlayer" src="media/StillWoozy-Window.mp3" type="audio/mpeg" preload="auto"></audio>
-
+        <div class="uk-navbar-center"><audio id="audioPlayer" src="media/StillWoozy-Window.mp3" type="audio/mpeg"
+                preload="auto"></audio>
             <ul id="mediaPlayer" class="uk-navbar-nav">
+                <li class="uk-visible@m"><a href="#"><img class="uk-border-circle" src="images/album-cover.jpg"
+                            width="50" height="50"></a></li>
                 <li class="uk-visible@m">
-                    <a href="#"><img class="uk-border-circle" src="images/album-cover.jpg" width="50" height="50"></a>
-                </li>
-                <li class="uk-visible@m">
-                    <div class="uk-padding-small">
-                        <a href="#" class="uk-text-top">Window</a> </br>
-                        <a href="#"><small>Still Woozy</small></a>
-                    </div>
+                    <div class="uk-padding-small"><a href="#" class="uk-text-top">Window</a></br><a
+                            href="#"><small>Still Woozy</small></a></div>
                 </li>
                 <li><a><i class="fal fa-backward"></i></a></li>
-                <li>
-                    <a id="playButton" onclick="playAudio()"><i class="fal fa-play fa-2x"></i></a>
-                </li>
-                <li>
-                    <a id="pauseButton" onclick="pauseAudio()" class="uk-hidden"><i class="fal fa-pause fa-2x"></i></a>
+                <li><a id="playButton" onclick="playAudio()"><i class="fal fa-play fa-2x"></i></a></li>
+                <li><a id="pauseButton" onclick="pauseAudio()" class="uk-hidden"><i class="fal fa-pause fa-2x"></i></a>
                 </li>
                 <li><a><i class="fal fa-forward"></i></a></li>
                 <li>
                     <div id="waveform"></div>
                 </li>
-                <li class="uk-visible@m">
-                    <a class="time">
-                        <span id="audioPassedTime">0:00</span>
-                        <span class="divider">&nbsp/&nbsp</span>
-                        <span id="audioDurationTime"></span>
-                    </a>
-                </li>
+                <li class="uk-visible@m"><a class="time"><span id="audioPassedTime">0:00</span><span
+                            class="divider">&nbsp/&nbsp</span><span id="audioDurationTime"></span></a></li>
             </ul>
         </div>
         <div class="uk-navbar-right uk-margin-right">
             <ul class="uk-navbar-nav">
-                <li>
-                    <a href="#playQueue" uk-toggle><i class="fal fa-list-alt"></i></a>
+                <li><a class="uk-navbar-toggle uk-visible@m" href="#search" uk-toggle><i class="fal fa-search"></i></a>
                 </li>
-                <li>
-                    <a class="uk-margin-right uk-padding-remove-right" href="#"><img
+
+                <li><a href="#playQueue" uk-toggle><i class="fal fa-list-alt"></i></a></li>
+                <li><a class="uk-margin-right uk-padding-remove-right" href="#"><img
                             class="uk-border-circle uk-blend-luminosity" width="35" height="35"
                             src="images/profile-image.png"></a>
                     <div class="uk-background-secondary"
@@ -68,15 +53,16 @@
         </div>
     </nav>
     <div id="appMenu" class="uk-hidden">
-        <div class="large-circle circle">
-            <a class="bottom-icon" href="#"><i class="fal fa-heart-square"></i></a>
-            <a class="middle-icon" href="#"><i class="fal fa-list-music"></i></a>
-            <a class="top-icon" href="#albums"><i class="fal fa-album-collection"></i></a>
-        </div>
-        <div class="medium-circle circle">
-            <a class="bottom-icon" href="#search"><i class="fal fa-search"></i></a>
-            <a class="top-icon" href="#"><i class="fal fa-home"></i></a>
-        </div>
+        <div class="large-circle circle"></div>
+        <div class="medium-circle circle"></div>
+
+        <ul uk-switcher="connect: .app-pages">
+            <li><a class="bottom-icon-large-circle" href="#"><i class="fal fa-heart-square"></i></a></li>
+            <li><a class="middle-icon-large-circle" href="#"><i class="fal fa-list-music"></i></a></li>
+            <li><a class="top-icon-large-circle" href="#"><i class="fal fa-album-collection"></i></a></li>
+            <li><a class="bottom-icon-medium-circle" href="#"><i class="fal fa-user-music"></i></a></li>
+            <li><a class="top-icon-medium-circle" href="#"><i class="fal fa-home"></i></a></li>
+        </ul>
         <div class="small-circle">
             <a id="appMenuCloseButton" onclick="closeAppMenu()" type="button" href="#"><i class="fal fa-times"></i></a>
         </div>
