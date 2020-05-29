@@ -5,3 +5,19 @@ html {
 .uk-text-primary {
     color: @global-primary-background;
 }
+
+.suggest-button {
+    float: right;
+    border: 1px solid @global-primary-background;
+    background: transparent;
+    color: @global-primary-background  !important;
+    padding: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+        background: @global-primary-background;
+        color: @global-inverse-color  !important;
+    }
+}
